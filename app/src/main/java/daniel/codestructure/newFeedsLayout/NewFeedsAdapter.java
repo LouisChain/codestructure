@@ -95,7 +95,12 @@ public class NewFeedsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     }
 
     public void changeFeeds(List<Feed> feeds) {
-        this.feeds = feeds;
+        if (this.feeds != null) {
+            this.feeds.clear();
+            this.feeds.addAll(feeds);
+        } else {
+            this.feeds = feeds;
+        }
         super.notifyDataSetChanged();
     }
 
