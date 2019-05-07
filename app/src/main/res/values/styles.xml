@@ -42,6 +42,8 @@
         <item name="android:paddingBottom">@dimen/feed_padding_bottom</item>
         <item name="android:textColor">@color/colorBlack</item>
         <item name="android:textSize">@dimen/feed_title_text_size</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
     </style>
 
     <style name="RowFeedLine">

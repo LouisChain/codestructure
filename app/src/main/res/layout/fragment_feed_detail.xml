@@ -40,6 +40,7 @@
             android:id="@+id/fragment_feed_detail_sections"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/fragment_feed_detail_description"/>
+            android:layout_below="@id/fragment_feed_detail_description"
+            android:paddingTop="@dimen/feed_detail_padding_top"/>
     </RelativeLayout>
 </android.support.v4.widget.NestedScrollView>
