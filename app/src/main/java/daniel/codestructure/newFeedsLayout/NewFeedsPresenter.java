@@ -22,6 +22,7 @@ public class NewFeedsPresenter implements NewFeedsContract.Presenter {
 
     @Override
     public void start() {
+        this.view.hideErrorDialog();
         this.view.showLoadingDialog();
         this.repository.getNewFeeds(
             new OnGetNewFeedsListener() {

@@ -17,6 +17,8 @@ public interface NewFeedsContract {
         void openFeedDetailLayout(Feed feed);
 
         void showError();
+
+        void hideErrorDialog();
     }
 
     interface Presenter extends BasePresenter {

@@ -13,6 +13,8 @@ public interface FeedDetailContract {
         void drawFeedDetail(Feed feed);
 
         void showError();
+
+        void hideErrorDialog();
     }
 
     interface Presenter extends BasePresenter {

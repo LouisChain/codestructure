@@ -24,6 +24,7 @@ public class FeedDetailPresenter implements FeedDetailContract.Presenter {
 
     @Override
     public void start() {
+        this.view.hideErrorDialog();
         this.view.showLoadingDialog();
         this.repository.getFeedDetail(
             new OnGetFeedDetailListener() {
