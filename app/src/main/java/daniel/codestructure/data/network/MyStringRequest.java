@@ -6,6 +6,8 @@ import com.android.volley.Response;
 import com.android.volley.RetryPolicy;
 import com.android.volley.toolbox.StringRequest;
 
+import daniel.codestructure.util.Config;
+
 public class MyStringRequest extends StringRequest {
     private static final String TAG = MyStringRequest.class.getSimpleName();
 
@@ -24,8 +26,8 @@ public class MyStringRequest extends StringRequest {
     @Override
     public Request<?> setRetryPolicy(RetryPolicy retryPolicy) {
         retryPolicy = new DefaultRetryPolicy(
-            5000,
-            3,
+            Config.Network.TIMEOUT,
+            Config.Network.MAX_NUMBER_RETRIES,
             DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
         return super.setRetryPolicy(retryPolicy);
     }
