@@ -11,6 +11,8 @@ public interface FeedDetailContract {
         void hideLoadingDialog();
 
         void drawFeedDetail(Feed feed);
+
+        void showError();
     }
 
     interface Presenter extends BasePresenter {

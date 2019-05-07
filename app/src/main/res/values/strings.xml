@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">CodeStructure</string>
     <string name="new_feeds">New Feeds</string>
+    <string name="warning">Warning</string>
+    <string name="internet_error">Can not connect to the Internet. Please try again!</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
 </resources>

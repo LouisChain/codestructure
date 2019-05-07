@@ -37,6 +37,7 @@ public class FeedDetailPresenter implements FeedDetailContract.Presenter {
                 @Override
                 public void onFailed(Throwable error) {
                     view.hideLoadingDialog();
+                    view.showError();
                     Log.e(TAG, "start", error);
                 }
             }

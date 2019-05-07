@@ -1,6 +1,8 @@
 package daniel.codestructure.feedDetailLayout;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -36,6 +38,7 @@ public class FeedDetailFragment extends Fragment implements FeedDetailContract.V
 
     private FeedDetailContract.Presenter presenter;
     private ProgressDialog progressDialog;
+    private AlertDialog alertDialog;
     private SectionsAdapter adapter;
 
     public static FeedDetailFragment getInstance() {
@@ -90,6 +93,32 @@ public class FeedDetailFragment extends Fragment implements FeedDetailContract.V
             TextUtil.decodeString(TextUtil.convertDateToString(feed.getPublishedDate()))
         );
         this.drawSections(feed.getSections());
+    }
+
+    @Override
+    public void showError() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(super.getActivity());
+        builder.setTitle(R.string.warning);
+        builder.setCancelable(true);
+        builder.setMessage(R.string.internet_error);
+        builder.setPositiveButton(
+            R.string.ok,
+            new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    presenter.start();
+                }
+            }
+        );
+        builder.setNegativeButton(
+            R.string.cancel,
+            new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    dialog.dismiss();
+                }
+            }
+        );
+        this.alertDialog = builder.create();
+        this.alertDialog.show();
     }
 
     private void setupRecyclerView() {

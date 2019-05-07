@@ -104,7 +104,7 @@ public class NewFeedsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
             new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    presenter.feedOnCLick(feed);
+                    presenter.feedOnClicked(feed);
                 }
             }
         );

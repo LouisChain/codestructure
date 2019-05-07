@@ -1,6 +1,8 @@
 package daniel.codestructure.newFeedsLayout;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -30,6 +32,7 @@ public class NewFeedsFragment extends Fragment implements NewFeedsContract.View 
 
     private NewFeedsContract.Presenter presenter;
     private ProgressDialog progressDialog;
+    private AlertDialog alertDialog;
     private NewFeedsAdapter adapter;
 
     public static NewFeedsFragment getInstance() {
@@ -91,6 +94,32 @@ public class NewFeedsFragment extends Fragment implements NewFeedsContract.View 
         Intent intent = new Intent(super.getActivity(), FeedDetailActivity.class);
         intent.putExtra(Config.Extras.FEED, feed);
         super.startActivity(intent);
+    }
+
+    @Override
+    public void showError() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(super.getActivity());
+        builder.setTitle(R.string.warning);
+        builder.setCancelable(true);
+        builder.setMessage(R.string.internet_error);
+        builder.setPositiveButton(
+            R.string.ok,
+            new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    presenter.start();
+                }
+            }
+        );
+        builder.setNegativeButton(
+            R.string.cancel,
+            new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    dialog.dismiss();
+                }
+            }
+        );
+        this.alertDialog = builder.create();
+        this.alertDialog.show();
     }
 
     private void setupRecyclerView() {

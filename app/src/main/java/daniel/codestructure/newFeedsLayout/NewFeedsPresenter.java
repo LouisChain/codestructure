@@ -34,6 +34,7 @@ public class NewFeedsPresenter implements NewFeedsContract.Presenter {
                 @Override
                 public void onFailed(Throwable error) {
                     view.hideLoadingDialog();
+                    view.showError();
                     Log.e(TAG, "start", error);
                 }
             }
@@ -41,7 +42,7 @@ public class NewFeedsPresenter implements NewFeedsContract.Presenter {
     }
 
     @Override
-    public void feedOnCLick(Feed feed) {
+    public void feedOnClicked(Feed feed) {
         this.view.openFeedDetailLayout(feed);
     }
 }

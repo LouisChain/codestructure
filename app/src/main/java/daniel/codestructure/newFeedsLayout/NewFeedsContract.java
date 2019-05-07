@@ -15,9 +15,11 @@ public interface NewFeedsContract {
         void drawNewFeeds(List<Feed> feeds);
 
         void openFeedDetailLayout(Feed feed);
+
+        void showError();
     }
 
     interface Presenter extends BasePresenter {
-        void feedOnCLick(Feed feed);
+        void feedOnClicked(Feed feed);
     }
 }
