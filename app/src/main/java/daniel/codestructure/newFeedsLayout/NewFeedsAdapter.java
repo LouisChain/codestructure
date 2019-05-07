@@ -2,11 +2,11 @@ package daniel.codestructure.newFeedsLayout;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.facebook.drawee.view.SimpleDraweeView;
@@ -99,7 +99,7 @@ public class NewFeedsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         super.notifyDataSetChanged();
     }
 
-    private void setupFeedClickListener(final RelativeLayout feedLayout, final Feed feed) {
+    private void setupFeedClickListener(final ConstraintLayout feedLayout, final Feed feed) {
         feedLayout.setOnClickListener(
             new View.OnClickListener() {
                 @Override
@@ -112,7 +112,7 @@ public class NewFeedsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
     public class FeedWithOneImageViewHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.row_feed_layout)
-        protected RelativeLayout rowFeedLayout;
+        protected ConstraintLayout rowFeedLayout;
         @BindView(R.id.row_feed_image)
         protected SimpleDraweeView feedImageView;
         @BindView(R.id.row_feed_author)
@@ -141,7 +141,7 @@ public class NewFeedsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
     public class FeedWithManyImagesViewHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.row_feed_layout)
-        protected RelativeLayout rowFeedLayout;
+        protected ConstraintLayout rowFeedLayout;
         @BindViews({
             R.id.row_feed_image_1,
             R.id.row_feed_image_2,
