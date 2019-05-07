@@ -119,6 +119,8 @@ public class NewFeedsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         protected TextView authorTextView;
         @BindView(R.id.row_feed_title)
         protected TextView titleTextView;
+        @BindView(R.id.row_feed_created_at)
+        protected TextView createdAtTextView;
 
         public FeedWithOneImageViewHolder(View view) {
             super(view);
@@ -139,6 +141,7 @@ public class NewFeedsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
             }
             this.authorTextView.setText(TextUtil.decodeString(feed.getPublisher().getName()));
             this.titleTextView.setText(TextUtil.decodeString(feed.getTitle()));
+            this.createdAtTextView.setText(TextUtil.convertDateToString(feed.getPublishedDate()));
         }
     }
 
@@ -156,6 +159,8 @@ public class NewFeedsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         protected TextView authorTextView;
         @BindView(R.id.row_feed_title)
         protected TextView titleTextView;
+        @BindView(R.id.row_feed_created_at)
+        protected TextView createdAtTextView;
 
         public FeedWithManyImagesViewHolder(View view) {
             super(view);
@@ -173,6 +178,7 @@ public class NewFeedsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
             }
             this.authorTextView.setText(TextUtil.decodeString(feed.getPublisher().getName()));
             this.titleTextView.setText(TextUtil.decodeString(feed.getTitle()));
+            this.createdAtTextView.setText(TextUtil.convertDateToString(feed.getPublishedDate()));
         }
 
         private void drawImage(SimpleDraweeView feedImageView, Image image) {

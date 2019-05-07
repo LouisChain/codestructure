@@ -47,5 +47,11 @@
             style="@style/RowFeedAuthorTextView"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/row_feed_title"/>
+
+        <TextView
+            android:id="@+id/row_feed_created_at"
+            style="@style/RowFeedAuthorTextView"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/row_feed_author"/>
     </android.support.constraint.ConstraintLayout>
 </android.support.v7.widget.CardView>
