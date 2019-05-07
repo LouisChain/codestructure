@@ -4,6 +4,9 @@ import android.text.Html;
 import android.util.Log;
 
 import java.io.UnsupportedEncodingException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class TextUtil {
     private static final String TAG = TextUtil.class.getSimpleName();
@@ -15,6 +18,18 @@ public class TextUtil {
         } catch (UnsupportedEncodingException e) {
             Log.e(TAG, "decodeString", e);
             return str;
+        }
+    }
+
+    public static String convertDateToString(String dateString) {
+        try {
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+            Date date = formatter.parse(dateString);
+            DateFormat dateFormat = new SimpleDateFormat("dd-mm-yyyy");
+            return dateFormat.format(date);
+        } catch (Exception e) {
+            Log.e(TAG, "convertDateToString", e);
+            return dateString;
         }
     }
 }

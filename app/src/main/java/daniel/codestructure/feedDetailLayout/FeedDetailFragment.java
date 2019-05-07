@@ -27,6 +27,8 @@ public class FeedDetailFragment extends Fragment implements FeedDetailContract.V
 
     @BindView(R.id.fragment_feed_detail_title)
     protected TextView titleTextView;
+    @BindView(R.id.fragment_feed_detail_created_at)
+    protected TextView createdAtTextView;
     @BindView(R.id.fragment_feed_detail_description)
     protected TextView descriptionTextView;
     @BindView(R.id.fragment_feed_detail_sections)
@@ -84,6 +86,9 @@ public class FeedDetailFragment extends Fragment implements FeedDetailContract.V
     public void drawFeedDetail(Feed feed) {
         this.titleTextView.setText(TextUtil.decodeString(feed.getTitle()));
         this.descriptionTextView.setText(TextUtil.decodeString(feed.getDescription()));
+        this.createdAtTextView.setText(
+            TextUtil.decodeString(TextUtil.convertDateToString(feed.getPublishedDate()))
+        );
         this.drawSections(feed.getSections());
     }
 
