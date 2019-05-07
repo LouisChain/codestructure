@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/section_padding_bottom">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/row_section_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:adjustViewBounds="true"
+        android:paddingBottom="@dimen/feed_padding_bottom"
+        android:scaleType="centerInside"/>
+
+    <TextView
+        android:id="@+id/row_section_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/row_section_image"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorBlue"
+        android:textSize="@dimen/feed_detail_text_size"
+        android:textStyle="italic"/>
+</RelativeLayout>

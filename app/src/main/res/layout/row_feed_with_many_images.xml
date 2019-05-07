@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/row_feed_layout"
+    style="@style/RowFeedRootLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/row_feed_images"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/feed_images_layout_height"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/feed_padding_bottom"
+        android:weightSum="4">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/row_feed_image_1"
+            style="@style/RowFeedImage"/>
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/row_feed_image_2"
+            style="@style/RowFeedImage"/>
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/row_feed_image_3"
+            style="@style/RowFeedImage"/>
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/row_feed_image_4"
+            style="@style/RowFeedImage"
+            android:paddingRight="@dimen/feed_image_padding_right"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/row_feed_author"
+        style="@style/RowFeedAuthorTextView"
+        android:layout_below="@id/row_feed_images"/>
+
+    <TextView
+        android:id="@+id/row_feed_title"
+        style="@style/RowFeedTitleTextView"
+        android:layout_below="@id/row_feed_author"/>
+
+    <View
+        style="@style/RowFeedLine"
+        android:layout_below="@id/row_feed_title"/>
+</RelativeLayout>

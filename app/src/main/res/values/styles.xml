@@ -1,0 +1,53 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Row Feed -->
+    <style name="RowFeedRootLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingBottom">@dimen/feed_padding_bottom</item>
+        <item name="android:paddingTop">@dimen/feed_padding_top</item>
+    </style>
+
+    <style name="RowFeedImage">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/feed_image_height</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingLeft">@dimen/feed_image_padding_left</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="RowFeedAuthorTextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/feed_padding_left</item>
+        <item name="android:paddingRight">@dimen/feed_padding_right</item>
+        <item name="android:paddingBottom">@dimen/feed_padding_bottom</item>
+        <item name="android:textColor">@color/colorGrayLight</item>
+        <item name="android:textSize">@dimen/feed_author_text_size</item>
+    </style>
+
+    <style name="RowFeedTitleTextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/feed_padding_left</item>
+        <item name="android:paddingRight">@dimen/feed_padding_right</item>
+        <item name="android:paddingBottom">@dimen/feed_padding_bottom</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/feed_title_text_size</item>
+    </style>
+
+    <style name="RowFeedLine">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/colorGrayLight</item>
+    </style>
+
+</resources>
