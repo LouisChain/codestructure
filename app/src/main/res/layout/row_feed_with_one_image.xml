@@ -18,16 +18,16 @@
             app:layout_constraintTop_toTopOf="parent"/>
 
         <TextView
-            android:id="@+id/row_feed_author"
-            style="@style/RowFeedAuthorTextView"
-            android:paddingTop="@dimen/feed_padding_top"
+            android:id="@+id/row_feed_title"
+            style="@style/RowFeedTitleTextView"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/row_feed_image"/>
 
         <TextView
-            android:id="@+id/row_feed_title"
-            style="@style/RowFeedTitleTextView"
+            android:id="@+id/row_feed_author"
+            style="@style/RowFeedAuthorTextView"
+            android:paddingTop="@dimen/feed_padding_top"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/row_feed_author"/>
+            app:layout_constraintTop_toBottomOf="@id/row_feed_title"/>
     </android.support.constraint.ConstraintLayout>
 </android.support.v7.widget.CardView>
