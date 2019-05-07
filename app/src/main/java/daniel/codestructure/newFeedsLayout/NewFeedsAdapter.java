@@ -131,6 +131,9 @@ public class NewFeedsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
             if (images != null && images.size() > 0) {
                 this.feedImageView.setVisibility(View.VISIBLE);
                 this.feedImageView.setImageURI(images.get(0).getHref());
+            } else if (feed.getAvatar() != null) {
+                this.feedImageView.setVisibility(View.VISIBLE);
+                this.feedImageView.setImageURI(feed.getAvatar().getHref());
             } else {
                 this.feedImageView.setVisibility(View.GONE);
             }
