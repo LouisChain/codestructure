@@ -9,11 +9,18 @@
     </style>
 
     <!-- Row Feed -->
+    <style name="RowFeedCardViewLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/feed_padding_bottom</item>
+        <item name="android:layout_marginTop">@dimen/feed_padding_top</item>
+        <item name="android:layout_marginRight">@dimen/feed_padding_bottom</item>
+        <item name="android:layout_marginLeft">@dimen/feed_padding_top</item>
+    </style>
+
     <style name="RowFeedRootLayout">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:paddingBottom">@dimen/feed_padding_bottom</item>
-        <item name="android:paddingTop">@dimen/feed_padding_top</item>
     </style>
 
     <style name="RowFeedImage">

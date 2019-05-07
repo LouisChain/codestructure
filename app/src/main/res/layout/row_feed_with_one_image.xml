@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    android:id="@+id/row_feed_layout"
-    style="@style/RowFeedRootLayout"
+<android.support.v7.widget.CardView
+    style="@style/RowFeedCardViewLayout"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <com.facebook.drawee.view.SimpleDraweeView
-        android:id="@+id/row_feed_image"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/feed_image_height"
-        android:layout_alignParentTop="true"
-        android:paddingBottom="@dimen/feed_padding_bottom"
-        android:scaleType="centerCrop"/>
+    <RelativeLayout
+        android:id="@+id/row_feed_layout"
+        style="@style/RowFeedRootLayout">
 
-    <TextView
-        android:id="@+id/row_feed_author"
-        style="@style/RowFeedAuthorTextView"
-        android:layout_below="@id/row_feed_image"/>
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/row_feed_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/feed_image_height"
+            android:layout_alignParentTop="true"
+            android:paddingBottom="@dimen/feed_padding_bottom"
+            android:scaleType="centerCrop"/>
 
-    <TextView
-        android:id="@+id/row_feed_title"
-        style="@style/RowFeedTitleTextView"
-        android:layout_below="@id/row_feed_author"/>
+        <TextView
+            android:id="@+id/row_feed_author"
+            style="@style/RowFeedAuthorTextView"
+            android:layout_below="@id/row_feed_image"
+            android:paddingTop="@dimen/feed_padding_top"/>
 
-    <View
-        style="@style/RowFeedLine"
-        android:layout_below="@id/row_feed_title"/>
-</RelativeLayout>
+        <TextView
+            android:id="@+id/row_feed_title"
+            style="@style/RowFeedTitleTextView"
+            android:layout_below="@id/row_feed_author"/>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
